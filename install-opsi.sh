@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -e 
 
-DEBIAN=1
-
 # ensure that package available v4l is at least minor version 16, if not install it manually
 function handle_v4l() {
     MINOR_VER="$(${1}-cache show v4l-utils | grep Version | cut -d: -f2 | cut -d- -f1 | tr -d ' ' | cut -d'.' -f2)"
@@ -62,7 +60,7 @@ function handle_debian() {
     # checks if system is debian or debian derived
     IS_DEBIAN="$(! grep -q ID=debian /etc/*-release; echo $?)"
     IS_DEBIAN_LIKE="$(! grep -q ID_LIKE=debian /etc/*-release; echo $?)"
-    if [ "$IS_DEBIAN" -eq 1 ]; then
+    if [ "${IS_DEBIAN}" -eq 1 ]; then
         DEBIAN=1
         TERMINOLOGY="Debian"
     fi
@@ -72,7 +70,7 @@ function handle_debian() {
     fi
 
     # check if user wants to install deps
-    if [ "$DEBIAN" -eq "1" ]; then
+    if [ "${DEBIAN:-0}" -eq "1" ]; then
         read -p "You seem to be running a Debian-derivitive. Would you like to automatically install the dependencies? [Y/n] " yn
         case $yn in
             [Nn]* ) : ;;
