@@ -36,7 +36,7 @@
     
     
       
-        <title>Introduction - OpenSight</title>
+        <title>Quick Start - OpenSight</title>
       
     
     
@@ -85,10 +85,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#creating-modules" tabindex="1" class="md-skip">
-        Skip to content
-      </a>
-    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -111,7 +107,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Introduction
+                Quick Start
               
             </span>
           
@@ -232,10 +228,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Getting Started
@@ -253,7 +251,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting-started/installation/" title="Installation" class="md-nav__link">
+    <a href="../installation/" title="Installation" class="md-nav__link">
       Installation
     </a>
   </li>
@@ -265,7 +263,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../getting-started/upgrading/" title="Upgrading" class="md-nav__link">
+    <a href="../upgrading/" title="Upgrading" class="md-nav__link">
       Upgrading
     </a>
   </li>
@@ -275,11 +273,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../getting-started/quickstart/" title="Quick Start" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Quick Start" class="md-nav__link md-nav__link--active">
       Quick Start
     </a>
+    
   </li>
 
         
@@ -304,12 +309,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Module Development
@@ -325,20 +328,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../module-dev/intro/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
-    
   </li>
 
         
@@ -348,7 +342,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../structure/" title="Module Structure" class="md-nav__link">
+    <a href="../../module-dev/structure/" title="Module Structure" class="md-nav__link">
       Module Structure
     </a>
   </li>
@@ -378,70 +372,17 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opensight-cv/docs/edit/master/docs/module-dev/intro.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opensight-cv/docs/edit/master/docs/getting-started/quickstart.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="creating-modules">Creating Modules<a class="headerlink" href="#creating-modules" title="Permanent link">&para;</a></h1>
-<p><strong>Modules</strong> make up a great portion of OpenSight's functionality. They are special types of classes that can operate on inputs and give outputs. They can be used in a wide variety of ways, such as modifing an image, performing math operations, or communicating with a server.</p>
-<p>Here's an example module, which does the following:</p>
-<ul>
-<li>Has a setting for the radius of the blur (of type integer)</li>
-<li>Inputs an image (of type Mat)</li>
-<li>Outputs the blurred image</li>
-</ul>
-<p><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
-
-<span class="kn">import</span> <span class="nn">opsi.manager.cvwrapper</span> <span class="kn">as</span> <span class="nn">cvw</span>
-<span class="kn">from</span> <span class="nn">opsi.manager.manager_schema</span> <span class="kn">import</span> <span class="n">Function</span>
-<span class="kn">from</span> <span class="nn">opsi.manager.types</span> <span class="kn">import</span> <span class="n">Mat</span><span class="p">,</span> <span class="n">MatBW</span>
-
-<span class="n">__package__</span> <span class="o">=</span> <span class="s2">&quot;opsi.example_module&quot;</span>
-<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;0.123&quot;</span>
-
-
-<span class="k">class</span> <span class="nc">Blur</span><span class="p">(</span><span class="n">Function</span><span class="p">):</span>
-    <span class="nd">@dataclass</span>
-    <span class="k">class</span> <span class="nc">Settings</span><span class="p">:</span>
-        <span class="n">radius</span><span class="p">:</span> <span class="nb">int</span>
-
-    <span class="nd">@dataclass</span>
-    <span class="k">class</span> <span class="nc">Inputs</span><span class="p">:</span>
-        <span class="n">img</span><span class="p">:</span> <span class="n">Mat</span>
-
-    <span class="nd">@dataclass</span>
-    <span class="k">class</span> <span class="nc">Outputs</span><span class="p">:</span>
-        <span class="n">img</span><span class="p">:</span> <span class="n">Mat</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
-        <span class="n">img</span> <span class="o">=</span> <span class="n">cvw</span><span class="o">.</span><span class="n">blur</span><span class="p">(</span><span class="n">inputs</span><span class="o">.</span><span class="n">img</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">radius</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Outputs</span><span class="p">(</span><span class="n">img</span><span class="o">=</span><span class="n">img</span><span class="p">)</span>
-</pre></div>
-There are already many useful modules included in OpenSight, but creating your own can add more complexity to your vision pipeline.</p>
-<p>The source code for the modules is located under <a href="https://github.com/opensight-cv/opensight/tree/master/opsi/manager">opsi/modules</a> in the OpenSight repo.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Using the <code class="codehilite"><span class="n">cv2</span></code> library directly is discouraged. All new OpenCV functionality should go into <a href="https://github.com/opensight-cv/opensight/blob/master/opsi/manager/cvwrapper.py">cvwrapper.py</a>.</p>
-</div>
+                  <h1>Quick Start</h1>
+                
+                <p>TODO: explain basic opensight functions, how to setup a nodetree, etc</p>
                 
                   
                 
@@ -462,7 +403,7 @@ There are already many useful modules included in OpenSight, but creating your o
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../planned/" title="Planned Pages" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../upgrading/" title="Upgrading" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -471,19 +412,19 @@ There are already many useful modules included in OpenSight, but creating your o
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Planned Pages
+                Upgrading
               </span>
             </div>
           </a>
         
         
-          <a href="../structure/" title="Module Structure" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../planned/" title="Planned Pages" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Module Structure
+                Planned Pages
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
