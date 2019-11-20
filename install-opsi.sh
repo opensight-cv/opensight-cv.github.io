@@ -19,7 +19,7 @@ function handle_v4l() {
                 * ) echo "Exiting..."; exit;;
             esac
         else
-            if ! v4l2-ctl >/dev/ull 2>&1; then
+            if ! v4l2-ctl >/dev/null 2>&1; then
                 install_v4l_from_src
             else
                 read -p "ERROR: Unknown/uncheckable version of v4l installed. Please ensure you have a version >= 1.16! (Press enter to proceed) "
@@ -66,7 +66,7 @@ function handle_debian() {
         DEBIAN=1
         TERMINOLOGY="Debian"
     fi
-    if [ "$IS_DEBIAN" -eq 1 ]; then
+    if [ "$IS_DEBIAN_LIKE" -eq 1 ]; then
         DEBIAN=1
         TERMINOLOGY="a Debian derivitive (eg. Ubuntu, Raspbian)"
     fi
@@ -83,7 +83,7 @@ function handle_debian() {
     fi
 }
 
-function create_repo {
+function create_repo() {
     git clone https://github.com/opensight-cv/opensight
     cd opensight
     read -p "Would you like to use the stable version of OpenSight? [Y/n] " yn
