@@ -11,7 +11,7 @@ function handle_v4l() {
         return
     else
         if [ "$V4L_INSTALLED" -eq "1" ]; then
-            read -p "You already have v4l-utils installed, however OpenSight needs a newer version to operate. Uninstall the current version and upgrade? [y/N] " yn
+            read -p "You already have v4l-utils installed, however OpenSight needs a newer version to operate. Uninstall the current version and upgrade? [y/N] " yn < /dev/tty
             case $yn in
                 [Yy]* ) ${1}-get remove -y v4l-utils; install_v4l_from_src;;
                 * ) echo "Exiting..."; exit;;
@@ -20,7 +20,7 @@ function handle_v4l() {
             if ! v4l2-ctl >/dev/null 2>&1; then
                 install_v4l_from_src
             else
-                read -p "ERROR: Unknown/uncheckable version of v4l installed. Please ensure you have a version >= 1.16! (Press enter to proceed) "
+                read -p "ERROR: Unknown/uncheckable version of v4l installed. Please ensure you have a version >= 1.16! (Press enter to proceed) " < /dev/tty
             fi
         fi
     fi
@@ -71,7 +71,7 @@ function handle_debian() {
 
     # check if user wants to install deps
     if [ "${DEBIAN:-0}" -eq "1" ]; then
-        read -p "You seem to be running a Debian-derivitive. Would you like to automatically install the dependencies? [Y/n] " yn
+        read -p "You seem to be running a Debian-derivitive. Would you like to automatically install the dependencies? [Y/n] " yn < /dev/tty
         case $yn in
             [Nn]* ) : ;;
             * ) install_deps;;
@@ -84,7 +84,7 @@ function handle_debian() {
 function create_repo() {
     git clone https://github.com/opensight-cv/opensight
     cd opensight
-    read -p "Would you like to use the stable version of OpenSight? [Y/n] " yn
+    read -p "Would you like to use the stable version of OpenSight? [Y/n] " yn < /dev/tty
     case $yn in
         [Nn]* ) : ;;
         * ) git checkout stable;;
