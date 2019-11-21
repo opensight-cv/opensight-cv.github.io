@@ -36,7 +36,7 @@
     
     
       
-        <title>Hardware - OpenSight</title>
+        <title>Upgrading - OpenSight</title>
       
     
     
@@ -85,6 +85,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#upgrading-on-raspberry-pi" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -107,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Hardware
+                Upgrading
               
             </span>
           
@@ -228,20 +232,34 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
-      Getting Started
+      Quick Start
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Getting Started
+        Quick Start
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hardware/" title="Hardware" class="md-nav__link">
+      Hardware
+    </a>
+  </li>
+
         
           
           
@@ -259,11 +277,52 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../upgrading/" title="Upgrading" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Upgrading
+      </label>
+    
+    <a href="./" title="Upgrading" class="md-nav__link md-nav__link--active">
       Upgrading
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-on-raspberry-pi" class="md-nav__link">
+    Upgrading on Raspberry Pi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-on-other-debian-systems" class="md-nav__link">
+    Upgrading on other Debian systems
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -273,8 +332,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../quickstart/" title="Quick Start" class="md-nav__link">
-      Quick Start
+    <a href="../getting-started/" title="Getting Started" class="md-nav__link">
+      Getting Started
     </a>
   </li>
 
@@ -289,27 +348,15 @@
       
 
 
-  <li class="md-nav__item">
-    <a href="../../planned/" title="Planned Pages" class="md-nav__link">
-      Planned Pages
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-3">
       Module Development
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-3">
         Module Development
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -339,6 +386,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../module-dev/glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -350,8 +409,20 @@
 
 
   <li class="md-nav__item">
-    <a href="../../glossary/" title="Glossary" class="md-nav__link">
-      Glossary
+    <a href="../../roadmap/" title="Roadmap and Contributing" class="md-nav__link">
+      Roadmap and Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../planned/" title="Planned Pages" class="md-nav__link">
+      Planned Pages
     </a>
   </li>
 
@@ -363,17 +434,82 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-on-raspberry-pi" class="md-nav__link">
+    Upgrading on Raspberry Pi
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#upgrading-on-other-debian-systems" class="md-nav__link">
+    Upgrading on other Debian systems
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opensight-cv/docs/edit/master/docs/getting-started/hardware.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opensight-cv/docs/edit/master/docs/quickstart/upgrading.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Hardware</h1>
+                  <h1>Upgrading</h1>
                 
-                <p>TODO: Detail different raspi bundles, expected framerates, 12V-&gt;5V, etc</p>
+                <p>Depending on which version of OpenSight you are using, you may or may not be able to use the upgrader. If you installed using the <a href="../installation/#installing-on-raspberry-pi">Raspberry Pi image</a> or the <a href="../installation/#installing-on-debian-arm-systems">Debian ARM systems (packages) method</a> you are able to use the upgrader.</p>
+<p><img alt="Image of the updater in settings" src="/assets/images/update.png" /></p>
+<p>The current version number is viewable in the bottom right of the settings page.</p>
+<h2 id="upgrading-on-raspberry-pi">Upgrading on Raspberry Pi<a class="headerlink" href="#upgrading-on-raspberry-pi" title="Permanent link">&para;</a></h2>
+<p>If you are on Raspberry Pi, you can do the following to update your OpenSight installation:</p>
+<ol>
+<li>Download the <strong>with dependencies tar.gz file</strong> on the <a href="https://github.com/opensight-cv/packages/releases/latest">latest release page</a> from the packages repository.</li>
+<li>Go to the settings page OpenSight instance.</li>
+<li>Drag and drop the file into the "Update" box, or browse and select the file.</li>
+<li>Click the "Update" button. </li>
+<li>Your Raspberry Pi should now start updating. This may take multiple minutes. Once you are able to access OpenSight again, updating should be finished.<ul>
+<li>If OpenSight is not accessible after approximately 10 minutes, either reflash the image or join <a href="https://discord.gg/hPqpdsK">our Discord</a> for support.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Technical Implications</strong>: The with dependencies tar.gz file contains updates for system packages as well the OpenSight packages. This ensures that any dependencies of OpenSight are upgraded along with OpenSight, and no manual upgrading is required.</p>
+</div>
+<h2 id="upgrading-on-other-debian-systems">Upgrading on other Debian systems<a class="headerlink" href="#upgrading-on-other-debian-systems" title="Permanent link">&para;</a></h2>
+<p>If you are on a different ARM Debian system, you can do the following to update your OpenSight installation:</p>
+<ol>
+<li>Download the <strong>normal tar.gz file</strong> (eg. not the with-dependencies file) on the <a href="https://github.com/opensight-cv/packages/releases/latest">latest release page</a> from the packages repository.</li>
+<li>Go to the settings page OpenSight instance.</li>
+<li>Drag and drop the file into the "Update" box, or browse and select the file.</li>
+<li>Click the "Update" button. <ul>
+<li>If OpenSight is not accessible after approximately 10 minutes, either reinstall OpenSight manually or join <a href="https://discord.gg/hPqpdsK">our Discord</a> for support.</li>
+</ul>
+</li>
+</ol>
                 
                   
                 
@@ -390,6 +526,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../installation/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Installation
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../getting-started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Getting Started
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

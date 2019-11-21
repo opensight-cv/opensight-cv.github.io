@@ -36,7 +36,7 @@
     
     
       
-        <title>Introduction - OpenSight</title>
+        <title>Hardware - OpenSight</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#creating-modules" tabindex="1" class="md-skip">
+      <a href="#hardware-configurations" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Introduction
+                Hardware
               
             </span>
           
@@ -232,10 +232,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       Quick Start
@@ -251,11 +253,106 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../quickstart/hardware/" title="Hardware" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Hardware
+      </label>
+    
+    <a href="./" title="Hardware" class="md-nav__link md-nav__link--active">
       Hardware
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-configurations" class="md-nav__link">
+    Hardware Configurations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raspberry-pi-4-85-fps-320x240" class="md-nav__link">
+    Raspberry Pi 4 85 FPS @ 320x240
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raspberry-pi-zero-20-30-fps-320x240" class="md-nav__link">
+    Raspberry Pi Zero 20-30 FPS @ 320x240*
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvidia-jetson-nano-120-fps-320x240" class="md-nav__link">
+    NVIDIA Jetson Nano 120+ FPS @ 320x240*
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-setup" class="md-nav__link">
+    General Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leds" class="md-nav__link">
+    LEDs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pcm" class="md-nav__link">
+    PCM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpio" class="md-nav__link">
+    GPIO
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -265,7 +362,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../quickstart/installation/" title="Installation" class="md-nav__link">
+    <a href="../installation/" title="Installation" class="md-nav__link">
       Installation
     </a>
   </li>
@@ -277,7 +374,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../quickstart/upgrading/" title="Upgrading" class="md-nav__link">
+    <a href="../upgrading/" title="Upgrading" class="md-nav__link">
       Upgrading
     </a>
   </li>
@@ -289,7 +386,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../quickstart/getting-started/" title="Getting Started" class="md-nav__link">
+    <a href="../getting-started/" title="Getting Started" class="md-nav__link">
       Getting Started
     </a>
   </li>
@@ -304,12 +401,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Module Development
@@ -325,20 +420,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../module-dev/intro/" title="Introduction" class="md-nav__link">
       Introduction
     </a>
-    
   </li>
 
         
@@ -348,7 +434,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../structure/" title="Module Structure" class="md-nav__link">
+    <a href="../../module-dev/structure/" title="Module Structure" class="md-nav__link">
       Module Structure
     </a>
   </li>
@@ -360,7 +446,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../glossary/" title="Glossary" class="md-nav__link">
+    <a href="../../module-dev/glossary/" title="Glossary" class="md-nav__link">
       Glossary
     </a>
   </li>
@@ -409,8 +495,83 @@
 <nav class="md-nav md-nav--secondary">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-configurations" class="md-nav__link">
+    Hardware Configurations
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#raspberry-pi-4-85-fps-320x240" class="md-nav__link">
+    Raspberry Pi 4 85 FPS @ 320x240
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#raspberry-pi-zero-20-30-fps-320x240" class="md-nav__link">
+    Raspberry Pi Zero 20-30 FPS @ 320x240*
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nvidia-jetson-nano-120-fps-320x240" class="md-nav__link">
+    NVIDIA Jetson Nano 120+ FPS @ 320x240*
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-setup" class="md-nav__link">
+    General Setup
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#leds" class="md-nav__link">
+    LEDs
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pcm" class="md-nav__link">
+    PCM
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpio" class="md-nav__link">
+    GPIO
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
   
 </nav>
                   </div>
@@ -422,50 +583,150 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/opensight-cv/docs/edit/master/docs/module-dev/intro.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/opensight-cv/docs/edit/master/docs/quickstart/hardware.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="creating-modules">Creating Modules<a class="headerlink" href="#creating-modules" title="Permanent link">&para;</a></h1>
-<p><strong>Modules</strong> make up a great portion of OpenSight's functionality. They are special types of classes that can operate on inputs and give outputs. They can be used in a wide variety of ways, such as modifing an image, performing math operations, or communicating with a server.</p>
-<p>Here's an example module, which does the following:</p>
-<ul>
-<li>Has a setting for the radius of the blur (of type integer)</li>
-<li>Inputs an image (of type Mat)</li>
-<li>Outputs the blurred image</li>
-</ul>
-<p><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
-
-<span class="kn">import</span> <span class="nn">opsi.manager.cvwrapper</span> <span class="kn">as</span> <span class="nn">cvw</span>
-<span class="kn">from</span> <span class="nn">opsi.manager.manager_schema</span> <span class="kn">import</span> <span class="n">Function</span>
-<span class="kn">from</span> <span class="nn">opsi.manager.types</span> <span class="kn">import</span> <span class="n">Mat</span><span class="p">,</span> <span class="n">MatBW</span>
-
-<span class="n">__package__</span> <span class="o">=</span> <span class="s2">&quot;opsi.example_module&quot;</span>
-<span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;0.123&quot;</span>
-
-
-<span class="k">class</span> <span class="nc">Blur</span><span class="p">(</span><span class="n">Function</span><span class="p">):</span>
-    <span class="nd">@dataclass</span>
-    <span class="k">class</span> <span class="nc">Settings</span><span class="p">:</span>
-        <span class="n">radius</span><span class="p">:</span> <span class="nb">int</span>
-
-    <span class="nd">@dataclass</span>
-    <span class="k">class</span> <span class="nc">Inputs</span><span class="p">:</span>
-        <span class="n">img</span><span class="p">:</span> <span class="n">Mat</span>
-
-    <span class="nd">@dataclass</span>
-    <span class="k">class</span> <span class="nc">Outputs</span><span class="p">:</span>
-        <span class="n">img</span><span class="p">:</span> <span class="n">Mat</span>
-
-    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
-        <span class="n">img</span> <span class="o">=</span> <span class="n">cvw</span><span class="o">.</span><span class="n">blur</span><span class="p">(</span><span class="n">inputs</span><span class="o">.</span><span class="n">img</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">settings</span><span class="o">.</span><span class="n">radius</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Outputs</span><span class="p">(</span><span class="n">img</span><span class="o">=</span><span class="n">img</span><span class="p">)</span>
-</pre></div>
-There are already many useful modules included in OpenSight, but creating your own can add more complexity to your vision pipeline.</p>
-<p>The source code for the modules is located under <a href="https://github.com/opensight-cv/opensight/tree/master/opsi/manager">opsi/modules</a> in the OpenSight repo.</p>
+                  <h1>Hardware</h1>
+                
+                <p>OpenSight is primarily targets the Raspberry Pi. However, it can be run on numerous different setups. OpenSight supports all cameras. If you have any compatibility issues with any coprocessor or camera, come to <a href="https://discord.gg/hPqpdsK">our Discord</a>.</p>
+<h2 id="hardware-configurations">Hardware Configurations<a class="headerlink" href="#hardware-configurations" title="Permanent link">&para;</a></h2>
+<p>The Raspberry Pi (and other coprocessors, such as the Jetson Nano) require 5V, so if you are using OpenSight on a robot, you will need to step down from 12V to 5V. All configurations include an appropriate step down module.</p>
+<p>Here are some recommended configurations at different price points. Each configuration inculdes a either typical or estimated performance. Any configurations with an estimated performance will be marked with a *. If you have any of these configurations and want to submit performance figures, we would greatly appreciate it!</p>
+<p><em>Most product links are Amazon links for consistency, however many of these parts can be found cheaper from their manufactuer.</em></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Using the <code class="codehilite"><span class="n">cv2</span></code> library directly is discouraged. All new OpenCV functionality should go into <a href="https://github.com/opensight-cv/opensight/blob/master/opsi/manager/cvwrapper.py">cvwrapper.py</a>.</p>
+<p>Please note that we have not tested all of these items. We are not specifically recommending any of these products. We are not liable for any non-working configurations or for any damage you do to any components.</p>
 </div>
+<h4 id="raspberry-pi-4-85-fps-320x240">Raspberry Pi 4 <small>85 FPS @ 320x240</small><a class="headerlink" href="#raspberry-pi-4-85-fps-320x240" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Link</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raspberry Pi 4 (1GB) + Case</td>
+<td><a href="https://amazon.com/dp/B07TD43PDZ">https://amazon.com/dp/B07TD43PDZ</a></td>
+<td>$38.40</td>
+</tr>
+<tr>
+<td>Arducam 5</td>
+<td><a href="https://amazon.com/dp/B012V1HEP4">https://amazon.com/dp/B012V1HEP4</a></td>
+<td>$12.99</td>
+</tr>
+<tr>
+<td>16GB MicroSD Card</td>
+<td><a href="https://amazon.com/dp/B073K14CVB">https://amazon.com/dp/B073K14CVB</a></td>
+<td>$5.79</td>
+</tr>
+<tr>
+<td>HOMREE DC 12V to DC 5V (USB-C)</td>
+<td><a href="https://amazon.com/dp/B07ZQB6S3L">https://amazon.com/dp/B07ZQB6S3L</a></td>
+<td>$10.90</td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>$68.08</td>
+</tr>
+</tbody>
+</table>
+<h4 id="raspberry-pi-zero-20-30-fps-320x240">Raspberry Pi Zero <small>20-30 FPS @ 320x240</small>*<a class="headerlink" href="#raspberry-pi-zero-20-30-fps-320x240" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Link</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Raspberry Pi Zero</td>
+<td><a href="https://adafruit.com/product/2885">https://adafruit.com/product/2885</a></td>
+<td>$5.00</td>
+</tr>
+<tr>
+<td>Raspberry Pi Zero Case</td>
+<td><a href="https://adafruit.com/product/3252">https://adafruit.com/product/3252</a></td>
+<td>$4.75</td>
+</tr>
+<tr>
+<td>Arducam 5</td>
+<td><a href="https://amazon.com/dp/B012V1HEP4">https://amazon.com/dp/B012V1HEP4</a></td>
+<td>$12.99</td>
+</tr>
+<tr>
+<td>16GB MicroSD Card</td>
+<td><a href="https://amazon.com/dp/B073K14CVB">https://amazon.com/dp/B073K14CVB</a></td>
+<td>$5.79</td>
+</tr>
+<tr>
+<td>HOMREE DC 12V to DC 5V (Micro USB)</td>
+<td><a href="https://amazon.com/dp/B01MEESLZ6">https://amazon.com/dp/B01MEESLZ6</a></td>
+<td>$9.99</td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>$38.52</td>
+</tr>
+</tbody>
+</table>
+<h4 id="nvidia-jetson-nano-120-fps-320x240">NVIDIA Jetson Nano <small>120+ FPS @ 320x240</small>*<a class="headerlink" href="#nvidia-jetson-nano-120-fps-320x240" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Link</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NVIDIA Jetson Nano Development Kit</td>
+<td><a href="https://amazon.com/dp/B07PZHBDKT">https://amazon.com/dp/B07PZHBDKT</a></td>
+<td>$98.95</td>
+</tr>
+<tr>
+<td>Arducam 5*</td>
+<td><a href="https://amazon.com/dp/B012V1HEP4">https://amazon.com/dp/B012V1HEP4</a></td>
+<td>$12.99</td>
+</tr>
+<tr>
+<td>16GB MicroSD Card</td>
+<td><a href="https://amazon.com/dp/B073K14CVB">https://amazon.com/dp/B073K14CVB</a></td>
+<td>$5.79</td>
+</tr>
+<tr>
+<td>HOMREE DC 12V to DC 5V (Micro USB)</td>
+<td><a href="https://amazon.com/dp/B01MEESLZ6">https://amazon.com/dp/B01MEESLZ6</a></td>
+<td>$9.99</td>
+</tr>
+<tr>
+<td>Total</td>
+<td></td>
+<td>$127.72</td>
+</tr>
+<tr>
+<td><small> * Yes, cameras for Raspberry Pi work on the Jetson Nano</small></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="general-setup">General Setup<a class="headerlink" href="#general-setup" title="Permanent link">&para;</a></h2>
+<p>To connect any coprocessor to the robot, you will need an <a href="https://amazon.com/dp/B00EUHRLF6">Ethernet cable</a>. Plug the Ethernet cable into the extra port on the radio to connect your coprocessor to the robot.</p>
+<h2 id="leds">LEDs<a class="headerlink" href="#leds" title="Permanent link">&para;</a></h2>
+<p>You can control LEDs either directly from the robot using the PCM, or by using GPIO (GPIO module coming soon). </p>
+<h3 id="pcm">PCM<a class="headerlink" href="#pcm" title="Permanent link">&para;</a></h3>
+<p>If you want to use PCM, make sure your PCM is running 12V, <strong>not 24V</strong>. Once you plug your LEDs into the PCM, you can control them from the Robot Code in the same way you would control a regular solenoid (<a href="https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/wpilibj/Solenoid.html">Java</a>/<a href="https://first.wpi.edu/FRC/roborio/release/docs/cpp/classfrc_1_1Solenoid.html">C++</a>).</p>
+<h3 id="gpio">GPIO<a class="headerlink" href="#gpio" title="Permanent link">&para;</a></h3>
+<p>If you plan on using GPIO, you will need a relay switch of some sort. Keep in mind that the Raspberry Pi's GPIO only outputs 3.3V. <a href="https://amazon.com/dp/B01M0E6SQM/">Here</a> is a relay switch which has been successfully tested with a Raspberry Pi 4. Also, most LEDs run off of 12V. Here is a diagram of how to properly set up LED control from the Pi. Here is a diagram of how to properly set this up:</p>
+<p><img alt="LED diagram" src="/assets/images/led.png" /></p>
                 
                   
                 
@@ -486,7 +747,7 @@ There are already many useful modules included in OpenSight, but creating your o
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../../quickstart/getting-started/" title="Getting Started" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../.." title="Home" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -495,19 +756,19 @@ There are already many useful modules included in OpenSight, but creating your o
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Getting Started
+                Home
               </span>
             </div>
           </a>
         
         
-          <a href="../structure/" title="Module Structure" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../installation/" title="Installation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Module Structure
+                Installation
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
