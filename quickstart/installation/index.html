@@ -494,7 +494,9 @@
                 
                   <h1>Installation</h1>
                 
-                <h2 id="installing-on-raspberry-pi">Installing on Raspberry Pi<a class="headerlink" href="#installing-on-raspberry-pi" title="Permanent link">&para;</a></h2>
+                <p>Depending on what system you are trying to install on, the process may differ. If you are installing on Raspberry Pi, go to the <a href="#installing-on-raspberry-pi">appropriate section</a>. If you are trying to install OpenSight on a different coprocessor, such as the Jetson Nano, you can find the process <a href="#installing-on-debian-arm-systems">here</a>.
+Currently, OpenSight is only directly supported on Linux. It should still work on Windows or MacOS, however the process to do so is far too elaborate to explain here (requries compiling multiple Python libraries). To install on any other Linux system, you can follow the <a href="#installing-on-other-systems">other systems installation</a>.</p>
+<h2 id="installing-on-raspberry-pi">Installing on Raspberry Pi<a class="headerlink" href="#installing-on-raspberry-pi" title="Permanent link">&para;</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only required on the first installation of the image. After that, you can use the <a href="../upgrading/">upgrader</a> in order to upgrade your installation. Any exceptions to this will be plainly noted on the releases page.</p>
@@ -510,9 +512,9 @@
 <p>After this finishes, you can put your Micro SD card back into your Pi. OpenSight should now be running! You can continue to the <a href="../getting-started/">Getting Started</a> page.</p>
 <p>If you have any issues, please join our <a href="https://discord.gg/hPqpdsK">Discord</a>, let us know the issue in the #help channel and we'll help you troubleshoot.</p>
 <h2 id="installing-on-debian-arm-systems">Installing on Debian ARM systems<a class="headerlink" href="#installing-on-debian-arm-systems" title="Permanent link">&para;</a></h2>
-<p>If you are running a Debian ARM based system, you can use the same packages generated for the Raspberry Pi. If the output of <code class="codehilite"><span class="n">dpkg</span><span class="o">-</span><span class="n">architecture</span> <span class="o">-</span><span class="n">q</span> <span class="n">DEB_BUILD_ARCH</span></code> is <code class="codehilite"><span class="n">armhf</span></code>, you can use the following set of instructions. Types of systems that meet this requirement would be:</p>
+<p>You must install Debian on your coprocessor in order to continue with this section. If you are running a Debian ARM based system, you can use the same packages generated for the Raspberry Pi. If the output of <code class="codehilite"><span class="n">dpkg</span><span class="o">-</span><span class="n">architecture</span> <span class="o">-</span><span class="n">q</span> <span class="n">DEB_BUILD_ARCH</span></code> is <code class="codehilite"><span class="n">armhf</span></code>, you can use the following set of instructions. Types of systems that meet this requirement would be:</p>
 <ul>
-<li>Raspberry Pi</li>
+<li>Raspberry Pi (without erasing anything on your current Raspbian installation)</li>
 <li>Jetson Nano</li>
 <li>Many coprocessors</li>
 </ul>
@@ -533,9 +535,9 @@ tar xf opsi-packages-*.tar.gz -C packages
 sudo apt install -y ./packages/deps/*.deb
 rm -rf /tmp/opsi/
 reboot
-</pre></div></p>
+</pre></div>
+Once your coprocessor restats, OpenSight should now be running! You can continue to the <a href="../getting-started/">Getting Started</a> page.</p>
 <h2 id="installing-on-other-systems">Installing on other systems<a class="headerlink" href="#installing-on-other-systems" title="Permanent link">&para;</a></h2>
-<p>Currently, OpenSight is only directly supported on Linux. It should still work on Windows or MacOS, however the process to do so is far too elaborate to explain here (requries compiling multiple Python libraries).</p>
 <p>If you are running a non-Debian derivative system (eg. anything other than Debian, Ubuntu, or Mint), you will need to install your distribution's version of the following:</p>
 <div class="codehilite"><pre><span></span><span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">git</span> <span class="n">curl</span> <span class="n">python3</span><span class="p">.</span><span class="mi">7</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="p">.</span><span class="mi">7</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span> <span class="n">python3</span><span class="o">-</span><span class="n">venv</span>
 </pre></div>
@@ -550,6 +552,7 @@ reboot
 <div class="codehilite"><pre><span></span><span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">opensight</span><span class="o">-</span><span class="n">cv</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">install</span><span class="o">-</span><span class="n">opsi</span><span class="p">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">bash</span>
 </pre></div>
 
+<p>After you do so, you should be able to <code class="codehilite"><span class="n">cd</span></code> into the <code class="codehilite"><span class="n">opensight</span></code> folder and run the script: <code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="n">run</span><span class="p">.</span><span class="n">sh</span></code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please only run the one line command if you understand the security implications of it. We recommend you inspect the installation script to ensure it is safe.</p>

@@ -89,11 +89,16 @@ function create_repo() {
         [Nn]* ) : ;;
         * ) git checkout stable;;
     esac
-    python3.7 -m venv venv
+    if [[ "$(python3 -V | cut -d"." -f2)" -ge "7" ]]; then
+        PYTHON="python3"
+    else
+        PYTHON="python3.7"
+    fi
+    ${PYTHON} -m venv venv
     source venv/bin/activate
     pip3 install setuptools wheel opencv-python
     pip3 install -r requirements_min.txt
-    echo "venv/bin/python3.7 opensight.py" > run.sh
+    echo "venv/bin/${PYTHON} opensight.py" > run.sh
     chmod +x run.sh
     echo 'Done! Run "run.sh" in order to run OpenSight.'
 }
