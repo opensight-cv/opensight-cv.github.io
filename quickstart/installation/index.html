@@ -512,7 +512,7 @@ Currently, OpenSight is only directly supported on Linux. It should still work o
 <p>After this finishes, you can put your Micro SD card back into your Pi. OpenSight should now be running! You can continue to the <a href="../getting-started/">Getting Started</a> page.</p>
 <p>If you have any issues, please join our <a href="https://discord.gg/hPqpdsK">Discord</a>, let us know the issue in the #help channel and we'll help you troubleshoot.</p>
 <h2 id="installing-on-debian-arm-systems">Installing on Debian ARM systems<a class="headerlink" href="#installing-on-debian-arm-systems" title="Permanent link">&para;</a></h2>
-<p>You must install Debian on your coprocessor in order to continue with this section. If you are running a Debian ARM based system, you can use the same packages generated for the Raspberry Pi. If the output of <code class="codehilite"><span class="n">dpkg</span><span class="o">-</span><span class="n">architecture</span> <span class="o">-</span><span class="n">q</span> <span class="n">DEB_BUILD_ARCH</span></code> is <code class="codehilite"><span class="n">armhf</span></code>, you can use the following set of instructions. Types of systems that meet this requirement would be:</p>
+<p>You must install Debian on your coprocessor in order to continue with this section. If you are running a Debian ARM based system, you can use the same packages generated for the Raspberry Pi. If the output of <code class="codehilite"><span class="err">dpkg-architecture -q DEB_BUILD_ARCH</span></code> is <code class="codehilite"><span class="err">armhf</span></code>, you can use the following set of instructions. Types of systems that meet this requirement would be:</p>
 <ul>
 <li>Raspberry Pi (without erasing anything on your current Raspbian installation)</li>
 <li>Jetson Nano</li>
@@ -539,20 +539,20 @@ reboot
 Once your coprocessor restats, OpenSight should now be running! You can continue to the <a href="../getting-started/">Getting Started</a> page.</p>
 <h2 id="installing-on-other-systems">Installing on other systems<a class="headerlink" href="#installing-on-other-systems" title="Permanent link">&para;</a></h2>
 <p>If you are running a non-Debian derivative system (eg. anything other than Debian, Ubuntu, or Mint), you will need to install your distribution's version of the following:</p>
-<div class="codehilite"><pre><span></span><span class="n">build</span><span class="o">-</span><span class="n">essential</span> <span class="n">git</span> <span class="n">curl</span> <span class="n">python3</span><span class="p">.</span><span class="mi">7</span> <span class="n">python3</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="p">.</span><span class="mi">7</span><span class="o">-</span><span class="n">dev</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span> <span class="n">python3</span><span class="o">-</span><span class="n">venv</span>
+<div class="codehilite"><pre><span></span><span class="err">build-essential git curl python3.7 python3-dev python3.7-dev python3-pip python3-venv</span>
 </pre></div>
 
 <p>Once you have done this, or if you are running a Debian derivative, simply run this command to create an OpenSight instance in your current directory:</p>
-<div class="codehilite"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">opensight</span><span class="o">-</span><span class="n">cv</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">install</span><span class="o">-</span><span class="n">opsi</span><span class="p">.</span><span class="n">sh</span>
-<span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">install</span><span class="o">-</span><span class="n">opsi</span><span class="p">.</span><span class="n">sh</span>
-<span class="p">.</span><span class="o">/</span><span class="n">install</span><span class="o">-</span><span class="n">opsi</span><span class="p">.</span><span class="n">sh</span>
+<div class="codehilite"><pre><span></span><span class="err">curl -O https://opensight-cv.github.io/install-opsi.sh</span>
+<span class="err">chmod +x install-opsi.sh</span>
+<span class="err">./install-opsi.sh</span>
 </pre></div>
 
 <p>or</p>
-<div class="codehilite"><pre><span></span><span class="n">curl</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">opensight</span><span class="o">-</span><span class="n">cv</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">io</span><span class="o">/</span><span class="n">install</span><span class="o">-</span><span class="n">opsi</span><span class="p">.</span><span class="n">sh</span> <span class="o">|</span> <span class="n">bash</span>
+<div class="codehilite"><pre><span></span><span class="err">curl https://opensight-cv.github.io/install-opsi.sh | bash</span>
 </pre></div>
 
-<p>After you do so, you should be able to <code class="codehilite"><span class="n">cd</span></code> into the <code class="codehilite"><span class="n">opensight</span></code> folder and run the script: <code class="codehilite"><span class="p">.</span><span class="o">/</span><span class="n">run</span><span class="p">.</span><span class="n">sh</span></code>.</p>
+<p>After you do so, you should be able to <code class="codehilite"><span class="err">cd</span></code> into the <code class="codehilite"><span class="err">opensight</span></code> folder and run the script: <code class="codehilite"><span class="err">./run.sh</span></code>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Please only run the one line command if you understand the security implications of it. We recommend you inspect the installation script to ensure it is safe.</p>

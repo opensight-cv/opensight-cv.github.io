@@ -430,7 +430,7 @@
 <p>TODO: explain module package structure</p>
 <h1 id="functions-break-into-separate-file">Functions (break into separate file?)<a class="headerlink" href="#functions-break-into-separate-file" title="Permanent link">&para;</a></h1>
 <p>TODO: explain general class setup</p>
-<p>A function has three main user-facing components: <strong>Inputs</strong>, <strong>Outputs</strong>, and <strong>Settings</strong>. Each one of these is a statically defined Python <a href="https://docs.python.org/3/library/dataclasses.html">dataclass</a>. You can create a dataclass by creating a class with the <code class="codehilite"><span class="nv">@dataclass</span><span class="w"></span></code> decorator, as shown here:</p>
+<p>A function has three main user-facing components: <strong>Inputs</strong>, <strong>Outputs</strong>, and <strong>Settings</strong>. Each one of these is a statically defined Python <a href="https://docs.python.org/3/library/dataclasses.html">dataclass</a>. You can create a dataclass by creating a class with the <code class="codehilite"><span class="err">@dataclass</span></code> decorator, as shown here:</p>
 <div class="codehilite"><pre><span></span><span class="nd">@dataclass</span>
 <span class="k">class</span> <span class="nc">Inputs</span><span class="p">:</span>
     <span class="n">x</span><span class="p">:</span> <span class="nb">int</span>

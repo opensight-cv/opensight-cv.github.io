@@ -53,7 +53,7 @@ function install_deps() {
         python3.7 python3-dev python3.7-dev \
         python3-pip python3-venv
     APTBASE="$(echo ${APTCMD} | cut -d'-' -f1)"
-    handle_v4l ${APTBASE}
+    handle_v4l "${APTBASE}"
 }
 
 function handle_debian() {
