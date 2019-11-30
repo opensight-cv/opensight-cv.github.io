@@ -345,6 +345,19 @@
     Settings
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-config" class="md-nav__link">
+    Network Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -504,6 +517,19 @@
     Settings
   </a>
   
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#network-config" class="md-nav__link">
+    Network Config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -552,7 +578,12 @@
 <p><img alt="Successful status indiactor" src="/assets/images/success.png" /></p>
 <p><img alt="Errored status indiactor" src="/assets/images/error.png" /></p>
 <h2 id="settings">Settings<a class="headerlink" href="#settings" title="Permanent link">&para;</a></h2>
-<p>The settings menu is where the system configuration is located, as compared to node-level configuration. Most of the configuration options are simple, however it is important to note that the <code class="codehilite"><span class="err">Use Static IP</span></code> only pertains to searching for the roboRIO (using static rather than mDNS).</p>
+<p>The settings menu is where the system configuration is located, as compared to node-level configuration.</p>
+<h3 id="network-config">Network Config<a class="headerlink" href="#network-config" title="Permanent link">&para;</a></h3>
+<p><strong>Static IP</strong></p>
+<p>Currently, this indicates whether your roboRIO network uses a static IP system (eg. access your roboRIO at 10.TE.AM.2). A proper static IP setting mechanism is planned for update v0.2.0.</p>
+<p><strong>Server Mode</strong></p>
+<p>If you aren't on a roboRIO network and want to access NetworkTables, you can enable "Server" mode. In Shuffleboard settings you can set the "Server" to the IP of your OpenSight instance (eg. opensight.local). If you are on a roboRIO network, this should always be "Client".</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Some options, such as system restart options and the updater are only available on the Raspberry Pi or other ARM systems.</p>
