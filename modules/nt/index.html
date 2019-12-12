@@ -32,11 +32,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
-        <title>Nt - OpenSight</title>
+        <title>NetworkTables - OpenSight</title>
       
     
     
@@ -56,7 +56,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -85,6 +85,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#accessing-networktables-values" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -107,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Nt
+                NetworkTables
               
             </span>
           
@@ -300,16 +304,169 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
-      Module Development
+      Modules
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contours/" title="Contours" class="md-nav__link">
+      Contours
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../videoio/" title="Video IO" class="md-nav__link">
+      Video IO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../color/" title="Color Operations" class="md-nav__link">
+      Color Operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mask/" title="Mask Operations" class="md-nav__link">
+      Mask Operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../draw/" title="Drawing Operations" class="md-nav__link">
+      Drawing Operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        NetworkTables
+      </label>
+    
+    <a href="./" title="NetworkTables" class="md-nav__link md-nav__link--active">
+      NetworkTables
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-networktables-values" class="md-nav__link">
+    Accessing NetworkTables Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putcoordinate" class="md-nav__link">
+    PutCoordinate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putnt" class="md-nav__link">
+    PutNT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getnt" class="md-nav__link">
+    GetNT
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Module Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
         Module Development
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -387,6 +544,56 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#accessing-networktables-values" class="md-nav__link">
+    Accessing NetworkTables Values
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putcoordinate" class="md-nav__link">
+    PutCoordinate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#putnt" class="md-nav__link">
+    PutNT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getnt" class="md-nav__link">
+    GetNT
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -395,11 +602,30 @@
                   <a href="https://github.com/opensight-cv/docs/edit/master/docs/modules/nt.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Nt</h1>
+                  <h1>NetworkTables</h1>
                 
-                <p>TODO</p>
+                <p>The NetworkTables (NT) module contains nodes used to output data to NetworkTables. NetworkTables is a framework provided by FIRST to easily send data between processors on the robot and to the driver station. These nodes can be found under the opsi-nt tab.</p>
+<h2 id="accessing-networktables-values">Accessing NetworkTables Values<a class="headerlink" href="#accessing-networktables-values" title="Permanent link">&para;</a></h2>
+<p>To access values from NetworkTables, use the following example code snippets for Java and C++. Replace the values <code class="codehilite"><span class="err">key</span></code> and <code class="codehilite"><span class="err">table</span></code> based off of the options in the node, and <code class="codehilite"><span class="err">type</span></code> based off what type of value you are outputting. E.g. <code class="codehilite"><span class="err">boolean</span></code>, <code class="codehilite"><span class="err">int</span></code>, <code class="codehilite"><span class="err">double</span></code>, etc.</p>
+<p>Basic accessing of NetworkTables in Java and C++. See the WPILib docs (<a href="https://first.wpi.edu/FRC/roborio/release/docs/java/edu/wpi/first/networktables/NetworkTable.html">Java</a>/<a href="https://first.wpi.edu/FRC/roborio/release/docs/cpp/classnt_1_1NetworkTable.html">C++</a>) for more information.</p>
+<p>Java
+<div class="codehilite"><pre><span></span><span class="n">NetworkTableInstance</span><span class="p">.</span><span class="na">getDefault</span><span class="p">().</span><span class="na">getTable</span><span class="p">(</span><span class="s">&quot;&lt;table&gt;&quot;</span><span class="p">).</span><span class="na">getEntry</span><span class="p">(</span><span class="s">&quot;&lt;key&gt;&quot;</span><span class="p">).</span><span class="na">get</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="o">&lt;</span><span class="k">default</span><span class="o">&gt;</span><span class="p">);</span>
+</pre></div></p>
+<p>C++
+<div class="codehilite"><pre><span></span><span class="n">nt</span><span class="o">::</span><span class="n">NetworkTableInstance</span><span class="o">::</span><span class="n">GetDefault</span><span class="p">().</span><span class="n">GetTable</span><span class="p">(</span><span class="s">&quot;&lt;table&gt;&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="n">Get</span><span class="o">&lt;</span><span class="n">Type</span><span class="o">&gt;</span><span class="p">(</span><span class="s">&quot;&lt;key&gt;&quot;</span><span class="p">,</span> <span class="o">&lt;</span><span class="k">default</span><span class="o">&gt;</span><span class="p">);</span>
+</pre></div></p>
+<p><img alt="NT Module Add Nodes Image" src="../../assets/images/modules/nt/module_nt.png" /></p>
+<h2 id="putcoordinate">PutCoordinate<a class="headerlink" href="#putcoordinate" title="Permanent link">&para;</a></h2>
+<p><img alt="PutCoordinate Node Image" src="../../assets/images/modules/nt/node_put_coordinate.png" /></p>
+<p>Takes a coordinate value and outputs it to NetworkTables. These values can be found under the table defined in the <code class="codehilite"><span class="err">path</span></code> setting, and under the values <code class="codehilite"><span class="o">[</span><span class="n">key</span><span class="o">]-</span><span class="n">x</span><span class="w"></span></code> and <code class="codehilite"><span class="o">[</span><span class="n">key</span><span class="o">]-</span><span class="n">y</span><span class="w"></span></code>. This node will often follow a <a href="../contours/#findcenter">FindCenter</a> node to output the center found.</p>
+<h2 id="putnt">PutNT<a class="headerlink" href="#putnt" title="Permanent link">&para;</a></h2>
+<p><img alt="PutNT Node Image" src="../../assets/images/modules/nt/node_put_nt.png" /></p>
+<p>The PutNT node puts a value of any type, not just a coordinate, to NetworkTables. This value can be found under the table defined in the <code class="codehilite"><span class="err">path</span></code> setting, and under the value defined in the <code class="codehilite"><span class="err">key</span></code> setting.</p>
+<h2 id="getnt">GetNT<a class="headerlink" href="#getnt" title="Permanent link">&para;</a></h2>
+<p>We are currently working on a node to retrieve values from NetworkTables. You can view the progress on <a href="https://github.com/opensight-cv/opensight/tree/feature/getnt">this branch</a>. </p>
                 
                   
+                
                 
               
               
@@ -414,6 +640,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../draw/" title="Drawing Operations" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Drawing Operations
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../../module-dev/intro/" title="Introduction" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Introduction
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -443,7 +704,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

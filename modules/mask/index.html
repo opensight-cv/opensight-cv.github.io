@@ -32,11 +32,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.5.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
-        <title>Mask - OpenSight</title>
+        <title>Mask Operations - OpenSight</title>
       
     
     
@@ -56,7 +56,7 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
     
@@ -85,6 +85,10 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
+      <a href="#dilate" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid">
@@ -107,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Mask
+                Mask Operations
               
             </span>
           
@@ -300,16 +304,169 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
-      Module Development
+      Modules
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-3">
+        Modules
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../contours/" title="Contours" class="md-nav__link">
+      Contours
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../videoio/" title="Video IO" class="md-nav__link">
+      Video IO
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../color/" title="Color Operations" class="md-nav__link">
+      Color Operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Mask Operations
+      </label>
+    
+    <a href="./" title="Mask Operations" class="md-nav__link md-nav__link--active">
+      Mask Operations
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dilate" class="md-nav__link">
+    Dilate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erode" class="md-nav__link">
+    Erode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invert" class="md-nav__link">
+    Invert
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    Join
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../draw/" title="Drawing Operations" class="md-nav__link">
+      Drawing Operations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nt/" title="NetworkTables" class="md-nav__link">
+      NetworkTables
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Module Development
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
         Module Development
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -387,6 +544,56 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dilate" class="md-nav__link">
+    Dilate
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erode" class="md-nav__link">
+    Erode
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invert" class="md-nav__link">
+    Invert
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#join" class="md-nav__link">
+    Join
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -395,11 +602,25 @@
                   <a href="https://github.com/opensight-cv/docs/edit/master/docs/modules/mask.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Mask</h1>
+                  <h1>Mask Operations</h1>
                 
-                <p>TODO</p>
+                <p>The Mask module contains nodes used to manipulate masks (which take the form of <code class="codehilite"><span class="err">imgBW</span></code>). Masks can be turned into contours using <a href="../contours/#findcontours">FindContours</a> or filter images using <a href="../draw/#bitwiseand">BitwiseAND</a>. These nodes can be found under the opsi-draw tab.</p>
+<p><img alt="Mask Module Add Nodes Image" src="../../assets/images/modules/mask/module_mask.png" /></p>
+<h2 id="dilate">Dilate<a class="headerlink" href="#dilate" title="Permanent link">&para;</a></h2>
+<p><img alt="Dilate Node Image" src="../../assets/images/modules/mask/node_dilate.png" /></p>
+<p>Takes a mask (<code class="codehilite"><span class="err">imgBW</span></code>) and extends all of its borders by the number of pixels defined in the <code class="codehilite"><span class="err">size</span></code> setting. Commonly used to reduce noise in an image, along with <a href="#erode">Erode</a>.</p>
+<h2 id="erode">Erode<a class="headerlink" href="#erode" title="Permanent link">&para;</a></h2>
+<p><img alt="Erode Node Image" src="../../assets/images/modules/mask/node_erode.png" /></p>
+<p>Takes a mask (<code class="codehilite"><span class="err">imgBW</span></code>) and removes the number of pixels around all its borders as defined in the <code class="codehilite"><span class="err">size</span></code> setting. Commonly used to reduce noise in an image, along with <a href="#dilate">Dilate</a>.</p>
+<h2 id="invert">Invert<a class="headerlink" href="#invert" title="Permanent link">&para;</a></h2>
+<p><img alt="Invert Node Image" src="../../assets/images/modules/mask/node_invert.png" /></p>
+<p>Inverts the mask such that all white areas become black and vise versa, effectively inverting the mask's effect.</p>
+<h2 id="join">Join<a class="headerlink" href="#join" title="Permanent link">&para;</a></h2>
+<p><img alt="Join Node Image" src="../../assets/images/modules/mask/node_join.png" /></p>
+<p>Joins two masks (<code class="codehilite"><span class="err">imgBW1</span></code> and <code class="codehilite"><span class="err">imgBW2</span></code>) such that if a pixel is white on either mask, it is white on the output mask.</p>
                 
                   
+                
                 
               
               
@@ -414,6 +635,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../color/" title="Color Operations" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Color Operations
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../draw/" title="Drawing Operations" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Drawing Operations
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -443,7 +699,7 @@
       
     </div>
     
-      <script src="../../assets/javascripts/application.8e03edeb.js"></script>
+      <script src="../../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
