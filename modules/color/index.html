@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#blur" tabindex="1" class="md-skip">
+      <a href="#absolute-difference-rgbhsv" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -374,8 +374,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#absolute-difference-rgbhsv" class="md-nav__link">
+    Absolute Difference RGB/HSV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#blur" class="md-nav__link">
     Blur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canny" class="md-nav__link">
+    Canny
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clamp-minmax" class="md-nav__link">
+    Clamp Min/Max
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-sampler" class="md-nav__link">
+    Color Sampler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-detector" class="md-nav__link">
+    Color Detector
   </a>
   
 </li>
@@ -549,8 +584,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#absolute-difference-rgbhsv" class="md-nav__link">
+    Absolute Difference RGB/HSV
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#blur" class="md-nav__link">
     Blur
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#canny" class="md-nav__link">
+    Canny
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clamp-minmax" class="md-nav__link">
+    Clamp Min/Max
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-sampler" class="md-nav__link">
+    Color Sampler
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-detector" class="md-nav__link">
+    Color Detector
   </a>
   
 </li>
@@ -592,9 +662,29 @@
                 
                 <p>The ColorOps module contains nodes used to manipulate an image directly. These nodes can be found under the opsi-colorops tab.</p>
 <p><img alt="ColorOps Module Add Nodes Image" src="../../assets/images/modules/colorops/module_colorops.png" /></p>
+<h2 id="absolute-difference-rgbhsv">Absolute Difference RGB/HSV<a class="headerlink" href="#absolute-difference-rgbhsv" title="Permanent link">&para;</a></h2>
+<p><img alt="Absolute Difference Node Image" src="../../assets/images/modules/colorops/node_absolute_difference.png" /></p>
+<p>The Absolute Difference node takes an input <code class="codehilite"><span class="err">img</span></code> and calculates the difference between each pixel in the image and a reference value.</p>
+<p>The RGB node has a <code class="codehilite"><span class="err">red</span></code>, <code class="codehilite"><span class="err">green</span></code>, and <code class="codehilite"><span class="err">blue</span></code> parameter to set the reference color. If a pixel in the input exactly matches the reference, the pixel in the output will be black. The further the pixel is from the reference, the brighter the output pixel will be. The RGB node also has a <code class="codehilite"><span class="err">to_greyscale</span></code> parameter. When <code class="codehilite"><span class="err">to_greyscale</span></code> is off, the output will be in RGB with the each channel being set to the difference from the reference in that channel. This can be used to invert an image by setting <code class="codehilite"><span class="err">to_greyscale</span></code> to false and set <code class="codehilite"><span class="err">red</span></code>, <code class="codehilite"><span class="err">green</span></code>, and <code class="codehilite"><span class="err">blue</span></code> to 255.</p>
+<p>The HSV node has a <code class="codehilite"><span class="err">hue</span></code>, <code class="codehilite"><span class="err">sat</span></code>, and <code class="codehilite"><span class="err">val</span></code> parameter to set the reference color in the HSV color system. HSV is a color system that reflects how humans perceive color. More information on the HSV color system can be found in <a href="https://www.lifewire.com/what-is-hsv-in-design-1078068">this article</a>. There are also sensitivity settings that effect how sensitive the output is to differences in hue, saturation, and value individually. For instance, if you only care about the hue of a pixel, you can set <code class="codehilite"><span class="err">hue_sensitivity</span></code> to some positive value and <code class="codehilite"><span class="err">sat_sensitivity</span></code> and <code class="codehilite"><span class="err">val_sensitivity</span></code> to zero.</p>
+<p>Both the RGB and HSV nodes have a <code class="codehilite"><span class="err">clamp_max</span></code> setting. If <code class="codehilite"><span class="err">clamp_max</span></code> is selected, any pixels with a value above <code class="codehilite"><span class="err">clamp_value</span></code> will have their value set to <code class="codehilite"><span class="err">clamp_value</span></code>. This can be used to do a form of thresholding where pixels that match the reference color appear dark (But still have some contrast) and everything else is a flat background.</p>
 <h2 id="blur">Blur<a class="headerlink" href="#blur" title="Permanent link">&para;</a></h2>
 <p><img alt="Blur Node Image" src="../../assets/images/modules/colorops/node_blur.png" /></p>
 <p>The Blur node takes an input <code class="codehilite"><span class="err">img</span></code> and blurs the image to produce the output <code class="codehilite"><span class="err">img</span></code>. The blur process is known as a box blur, where each pixel's red, green, and blue values are individually averaged with the pixels surrounding it. The number of pixels it is averaged with determined by the <code class="codehilite"><span class="err">radius</span></code> setting, which is the radius of the surrounding pixels to be averaged with.</p>
+<h2 id="canny">Canny<a class="headerlink" href="#canny" title="Permanent link">&para;</a></h2>
+<p><img alt="Canny Node Image" src="../../assets/images/modules/colorops/node_canny.png" /></p>
+<p>The Canny node takes an input <code class="codehilite"><span class="err">img</span></code> and detects edges in the image. The output is a black-and-white image with white pixels representing lines in the input image. The Canny node has a <code class="codehilite"><span class="err">threshold</span></code> value to set its sensitivity. Any edge that is stronger than the upper end of the threshold setting is automatically kept, and any edge between the lower and upper threshold is only kept if it is connected to an edge above the upper edge of the threshold. You can read more about the threshold setting <a href="https://docs.opencv.org/master/da/d22/tutorial_py_canny.html">in this OpenCV tutorial</a>.</p>
+<h2 id="clamp-minmax">Clamp Min/Max<a class="headerlink" href="#clamp-minmax" title="Permanent link">&para;</a></h2>
+<p><img alt="Clamp Node Image" src="../../assets/images/modules/colorops/node_clamp.png" /></p>
+<p>The clamp min/max nodes limit the minimum and maximum value of pixels in an image.</p>
+<p>ClampMin increases the brightness of any pixel below its threshold to its threshold.</p>
+<p>ClampMax decreases the brightnss of any pixel above its threshold to its threshold.</p>
+<h2 id="color-sampler">Color Sampler<a class="headerlink" href="#color-sampler" title="Permanent link">&para;</a></h2>
+<p><img alt="Color Sampler Node Image" src="../../assets/images/modules/colorops/node_color_sampler.png" /></p>
+<p>The Color Sampler node samples the color of a point in an image and outputs the result in RGB. It has two sliders, <code class="codehilite"><span class="err">x_pct</span></code> and <code class="codehilite"><span class="err">y_pct</span></code>, which are used to set the point in the image that is sampled. These values are percentages of the image resolution. There is also an option <code class="codehilite"><span class="err">draw_color</span></code> to draw a point on the image and the RGB values detected, or the HSV values detected by selecting the <code class="codehilite"><span class="err">draw_hsv</span></code> option.</p>
+<h2 id="color-detector">Color Detector<a class="headerlink" href="#color-detector" title="Permanent link">&para;</a></h2>
+<p><img alt="Color Detector Node Image" src="../../assets/images/modules/colorops/node_color_detector.png" /></p>
+<p>The Color Detector node is intended to be used with the Color Sampler node to detect which color of the Control Panel from Infinite Recharge is being sampled. The node has a parameter for the hue of each color of the color wheel. You can tune these values by enabling the <code class="codehilite"><span class="err">draw_color</span></code> and <code class="codehilite"><span class="err">draw_hsv</span></code> options on the Color Sampler node to view the HSV values of each section of the color wheel.</p>
 <h2 id="greyscale">Greyscale<a class="headerlink" href="#greyscale" title="Permanent link">&para;</a></h2>
 <p><img alt="Greyscale Node Image" src="../../assets/images/modules/colorops/node_greyscale.png" /></p>
 <p>The Greyscale node takes an input <code class="codehilite"><span class="err">img</span></code> and outputs the greyscale version of that image to <code class="codehilite"><span class="err">img</span></code>. This is done by multiplying each pixel's red, green, and blue values by constant value, then summing them, to produce a greyscale image. Each red value is multiplied by 0.299, green by 0.587, blue by 0.114. These constants are based off of how humans perceive color.</p>
