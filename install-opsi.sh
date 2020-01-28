@@ -84,10 +84,10 @@ function handle_debian() {
 function create_repo() {
     git clone https://github.com/opensight-cv/opensight
     cd opensight
-    read -p "Would you like to use the stable version of OpenSight? [Y/n] " yn < /dev/tty
+    read -p "Would you like to use the development, unstable version of OpenSight? [Y/n] " yn < /dev/tty
     case $yn in
         [Nn]* ) : ;;
-        * ) git checkout stable;;
+        * ) git checkout dev;;
     esac
     if [[ "$(python3 -V | cut -d"." -f2)" -ge "7" ]]; then
         PYTHON="python3"
