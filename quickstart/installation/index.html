@@ -639,7 +639,8 @@ mkdir /tmp/opsi<span class="p">;</span> <span class="nb">cd</span> /tmp/opsi
 curl -LO <span class="nv">$url</span>
 mkdir -p packages
 tar xf opsi-packages-*.tar.gz -C packages
-sudo apt install -y ./packages/deps/*.deb
+<span class="nv">suggests</span><span class="o">=</span><span class="k">$(</span>dpkg-deb -I <span class="s2">&quot;/packages/deps/opensight_&quot;</span>*<span class="s2">&quot;.deb&quot;</span> <span class="p">|</span> grep Suggests <span class="p">|</span> sed -e <span class="s1">&#39;s/ Suggests: //&#39;</span> -e <span class="s1">&#39;s/:.*$//g&#39;</span> -e <span class="s1">&#39;s/\n/ /g&#39;</span> -e <span class="s1">&#39;s/(/@/g&#39;</span> -e <span class="s1">&#39;s/)/@/g&#39;</span> -e <span class="s1">&#39;s/ @\([^@]*\)@//g&#39;</span> -e <span class="s2">&quot;s/,//g&quot;</span><span class="k">)</span>
+sudo apt install -y ./packages/deps/*.deb <span class="nv">$suggests</span>
 rm -rf /tmp/opsi/
 reboot
 </code></pre></div>
