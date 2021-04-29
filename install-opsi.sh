@@ -86,7 +86,7 @@ function create_repo() {
     cd opensight
     read -p "Would you like to use the development, unstable version of OpenSight? [Y/n] " yn < /dev/tty
     case $yn in
-        [Nn]* ) : ;;
+        [Nn]* ) git checkout master ;;
         * ) git checkout dev;;
     esac
     if [[ "$(python3 -V | cut -d"." -f2)" -ge "7" ]]; then
